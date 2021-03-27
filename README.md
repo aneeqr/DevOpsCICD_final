@@ -76,6 +76,7 @@ az deployment group create \
 
 1. First, we create a module that read images from camera, and send to our classifier to perform inference. Here we are just going to have a static picture.
 2. Check github for camera specific code.
+3. Make sure you replace the container registry details in the module.json file.
 
 ### OBJECT DETECTION MODULE
 
@@ -84,7 +85,8 @@ az deployment group create \
 
 ![image](https://user-images.githubusercontent.com/32796589/112736968-b31a5300-8f4e-11eb-83f3-01583c770af9.png)
 
-3. If you expand “app”, you will see a python script to perform prediction, as well as the model exported from custom vision. If you notice, there are several Dockerfile over here. Tell IoT Edge to use “Dockerfile” (The one without other extension) during compilation by modifying **“module.json”**
+3. If you expand “app”, you will see a python script to perform prediction, as well as the model exported from custom vision. If you notice, there are several Dockerfile over here. Tell IoT Edge to use “Dockerfile” (The one without other extension) during compilation by modifying **“module.json”**.
+4. Make sure you replace the container registry details in the module.json file.
 
  ```{r}   
 {
