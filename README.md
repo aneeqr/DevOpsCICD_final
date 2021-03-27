@@ -81,7 +81,31 @@ az deployment group create \
 
 1. Add a new Iot Solution using Visual Studio Code. ![image](https://user-images.githubusercontent.com/32796589/112736940-85cda500-8f4e-11eb-8b07-f7d0e6a07c50.png)
 2. Unzip the file we downloaded from Custom Vision, and copy to the folder contains module above. There are 4 files copied, as shown below:
+
 ![image](https://user-images.githubusercontent.com/32796589/112736968-b31a5300-8f4e-11eb-83f3-01583c770af9.png)
+
 3. If you expand “app”, you will see a python script to perform prediction, as well as the model exported from custom vision. If you notice, there are several Dockerfile over here. Tell IoT Edge to use “Dockerfile” (The one without other extension) during compilation by modifying **“module.json”**
 
- 
+ ```{r}   
+{
+  "$schema-version": "0.0.1",
+  "description": "",
+  "image": {
+    "repository": "iotedgedevopsqxw.azurecr.io/medium_classifier",
+    "tag": {
+      "version": "0.0.1",
+      "platforms": {
+        "amd64": "./Dockerfile",
+        "amd64.debug": "./Dockerfile"
+      }
+    },
+    "buildOptions": [],
+    "contextPath": "./"
+  },
+  "language": "python"
+}
+```
+4. Now we will import our repo in the DevOps and build a CI/CD pipeline.
+
+## DevOps — Repo and Pipeline
+
