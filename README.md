@@ -1,4 +1,11 @@
 # DevOpsCICD_final
+
+## OVERALL FLOWCHART
+
+![image](https://user-images.githubusercontent.com/32796589/112736777-24f19d00-8f4d-11eb-87f1-8df07520a779.png)
+
+
+[Reference](https://medium.com/marcus-tee-anytime/azure-iot-edge-with-azure-devops-manage-intelligent-edge-devices-with-automated-pipeline-bd98d9388b)
  
  
  ## CREATE AZURE RESOURCES
