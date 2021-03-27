@@ -113,6 +113,9 @@ Push your code in your visual studio workspace to Github.
 
 ## DevOps — Repo and Pipeline
 
+
+### CI Pipline
+
 1. Navigate to [DevOps](https://dev.azure.com)
 2. Create a new Organisation and create a new project inside it with visibility private.
 ![image](https://user-images.githubusercontent.com/32796589/112737112-e1e4f900-8f4f-11eb-83f6-37e248a8a56a.png)
@@ -141,8 +144,18 @@ Push your code in your visual studio workspace to Github.
 14. Enable Continous integration
 ![image](https://user-images.githubusercontent.com/32796589/112737729-8406e000-8f54-11eb-89c9-611a523c4f59.png)
 15. Go to variables and enter your container registery details (CONTAINER_REGISTRY_USERNAME,CONTAINER_REGISTRY_PASSWORD,CONTAINER_REGISTRY_ADDRESS). These can be found on portal
+
 ![image](https://user-images.githubusercontent.com/32796589/112737895-0643d400-8f56-11eb-9cf4-08b03b2e2b3c.png)
+
 ![image](https://user-images.githubusercontent.com/32796589/112737855-9b929880-8f55-11eb-8993-1bd443d0335c.png)
-![image](https://user-images.githubusercontent.com/32796589/112737869-c54bbf80-8f55-11eb-9488-4ea29a89c05c.png)
+
 ![image](https://user-images.githubusercontent.com/32796589/112737815-3474e400-8f55-11eb-8c02-6e2f1ebc2108.png)
-16.
+
+16. Once done, click Save & Queue and proceed with the compilation. Your pipeline should build as follows showing all completed steps.
+
+![image](https://user-images.githubusercontent.com/32796589/112737939-63d82080-8f56-11eb-8c3a-c3542f0dcea9.png)
+
+This completed the CI pipeline.
+
+
+### CD Pipeline
