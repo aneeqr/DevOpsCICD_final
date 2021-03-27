@@ -38,4 +38,9 @@ az deployment group create \
 ![image](https://user-images.githubusercontent.com/32796589/112736422-5ddc4280-8f4a-11eb-96e8-1d67e97f949b.png)
 ![image](https://user-images.githubusercontent.com/32796589/112736382-2077b500-8f4a-11eb-8a0b-87153ff7dea7.png)
 
- 
+5. Run the following commands to test the status of the IoT Edge device:
+  ```{r}
+  sudo systemctl status iotedge
+  ```{r}
+ ![image](https://user-images.githubusercontent.com/32796589/112736541-684b0c00-8f4b-11eb-981c-033e025683f4.png)
+
