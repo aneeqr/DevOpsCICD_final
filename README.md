@@ -65,5 +65,23 @@ az deployment group create \
  4. Choose export as Docker File and export as linux container.
  ![image](https://user-images.githubusercontent.com/32796589/112736701-91b86780-8f4c-11eb-96e5-c892650a59df.png)
 
- 6. Choose Docker File
 
+ ## IOT EDGE SOLUTION — CUSTOM MODULES AND COMPILATION
+ 
+ 1. Download [Visual Studio Code](https://code.visualstudio.com/).
+ 2. Install [Azure Iot Tools extension](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.azure-iot-tools) in Visual studio.
+ 3. Create an IoT Edge solution, with a custom python module. Watch this [https://www.youtube.com/watch?v=PrbpsnHU3CQ&t=2s] Video for more details.
+
+### CAMERA MODULE
+
+1. First, we create a module that read images from camera, and send to our classifier to perform inference. Here we are just going to have a static picture.
+2. Check github for camera specific code.
+
+### OBJECT DETECTION MODULE
+
+1. Add a new Iot Solution using Visual Studio Code. ![image](https://user-images.githubusercontent.com/32796589/112736940-85cda500-8f4e-11eb-8b07-f7d0e6a07c50.png)
+2. Unzip the file we downloaded from Custom Vision, and copy to the folder contains module above. There are 4 files copied, as shown below:
+![image](https://user-images.githubusercontent.com/32796589/112736968-b31a5300-8f4e-11eb-83f3-01583c770af9.png)
+3. If you expand “app”, you will see a python script to perform prediction, as well as the model exported from custom vision. If you notice, there are several Dockerfile over here. Tell IoT Edge to use “Dockerfile” (The one without other extension) during compilation by modifying **“module.json”**
+
+ 
