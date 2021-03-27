@@ -41,6 +41,22 @@ az deployment group create \
 5. Run the following commands to test the status of the IoT Edge device:
   ```{r}
   sudo systemctl status iotedge
-  ```{r}
+  ```
+  
  ![image](https://user-images.githubusercontent.com/32796589/112736541-684b0c00-8f4b-11eb-981c-033e025683f4.png)
+
+
+ ## CREATE YOUR OBJECT DETECTION MODEL USING MICROSOFT COGNITIVE SERVICES
+ 
+ 
+ 1. Login to the [Custom Vision AI Portal](https://www.customvision.ai)
+ 2. Train your model.
+ ![image](https://user-images.githubusercontent.com/32796589/112736608-f1624300-8f4b-11eb-8898-603a6daadfe9.png)
+ 3. Export your model.
+ ![image](https://user-images.githubusercontent.com/32796589/112736672-5453da00-8f4c-11eb-9ef3-23f9e7985b68.png)
+ ![image](https://user-images.githubusercontent.com/32796589/112736654-430acd80-8f4c-11eb-96a5-381deb0408f1.png)
+ 4. Choose export as Docker File and export as linux container.
+ ![image](https://user-images.githubusercontent.com/32796589/112736701-91b86780-8f4c-11eb-96e5-c892650a59df.png)
+
+ 6. Choose Docker File
 
