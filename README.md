@@ -107,5 +107,18 @@ az deployment group create \
 ```
 4. Now we will import our repo in the DevOps and build a CI/CD pipeline.
 
+## PUSH ALL CODE TO GITHUB
+
+Push your code in your visual studio workspace to Github.
+
 ## DevOps — Repo and Pipeline
 
+1. Navigate to [DevOps](https://dev.azure.com)
+2. Create a new Organisation and create a new project inside it with visibility private.
+![image](https://user-images.githubusercontent.com/32796589/112737112-e1e4f900-8f4f-11eb-83f6-37e248a8a56a.png)
+3. Go to Repos and Files and click on import a new repository.
+![image](https://user-images.githubusercontent.com/32796589/112737138-13f65b00-8f50-11eb-8114-1115330d8384.png)
+4. Enter the link to your github repo.
+![image](https://user-images.githubusercontent.com/32796589/112737157-41430900-8f50-11eb-9fd2-d4985015775a.png)
+
+6. sad
