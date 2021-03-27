@@ -119,6 +119,30 @@ Push your code in your visual studio workspace to Github.
 3. Go to Repos and Files and click on import a new repository.
 ![image](https://user-images.githubusercontent.com/32796589/112737138-13f65b00-8f50-11eb-8114-1115330d8384.png)
 4. Enter the link to your github repo.
-![image](https://user-images.githubusercontent.com/32796589/112737157-41430900-8f50-11eb-9fd2-d4985015775a.png)
-
-6. sad
+![image](https://user-images.githubusercontent.com/32796589/112737225-aeef3500-8f50-11eb-8a4b-961e3ad5992a.png)
+5. Go to pipelines and press use the classic editor.
+![image](https://user-images.githubusercontent.com/32796589/112737251-e8c03b80-8f50-11eb-9dc9-0813465c7ad2.png) 
+6. Select Azure repos Git and press continue.
+![image](https://user-images.githubusercontent.com/32796589/112737270-1dcc8e00-8f51-11eb-8bc9-392a64453ab0.png)
+7. Select your repo, and start with **“Empty job”** on the template page. This is the place for us to configure automation steps via the agent hosted in cloud.
+![image](https://user-images.githubusercontent.com/32796589/112737292-4d7b9600-8f51-11eb-8d94-c2e1c4e76507.png)
+8. Select Agent specification as Ubuntu-18.04 or 16.04. 
+![image](https://user-images.githubusercontent.com/32796589/112737300-66844700-8f51-11eb-84cf-80712307d711.png)
+9. In the tasks section, Click on **“+”* to add tasks, navigate to Marketplace, and search for **“Azure IoT Edge”**
+![image](https://user-images.githubusercontent.com/32796589/112737335-b531e100-8f51-11eb-8643-b3751664988e.png)
+10. Add the module. Under **“Action”**, select **“Build module images”**. Browse your repo to indicate the **“deployment.template.json”** as well. Leave the rest default
+![image](https://user-images.githubusercontent.com/32796589/112737385-15c11e00-8f52-11eb-879c-91fbc29011c8.png)
+11. Add a new task using the **“Azure IoT Edge”** extension. After building images, we need to push to our Azure Container Registry. Now, the action change to **“Push module images”**
+![image](https://user-images.githubusercontent.com/32796589/112737486-d515d480-8f52-11eb-996b-4042e21e2f1f.png)
+12. Copy files to our artifact repository for deployment. Add a task called **“Copy files”**. Select your repository as Source Folder, enter the following 2 lines for contents that we need to copy, and **“$(Build.ArtifactStagingDirectory)”** as our target folder.
+![image](https://user-images.githubusercontent.com/32796589/112737575-73099f00-8f53-11eb-8e45-bf7ddb0cb830.png)
+13. Finally, we need to publish artifacts. Add a new task using **“Publish build artifacts”.** Ensure the path to publish is same as above, and put **“drop”** as Artifact name.
+![image](https://user-images.githubusercontent.com/32796589/112737723-74879700-8f54-11eb-8541-f5967e589a8d.png)
+14. Enable Continous integration
+![image](https://user-images.githubusercontent.com/32796589/112737729-8406e000-8f54-11eb-89c9-611a523c4f59.png)
+15. Go to variables and enter your container registery details (CONTAINER_REGISTRY_USERNAME,CONTAINER_REGISTRY_PASSWORD,CONTAINER_REGISTRY_ADDRESS). These can be found on portal
+![image](https://user-images.githubusercontent.com/32796589/112737895-0643d400-8f56-11eb-9cf4-08b03b2e2b3c.png)
+![image](https://user-images.githubusercontent.com/32796589/112737855-9b929880-8f55-11eb-8993-1bd443d0335c.png)
+![image](https://user-images.githubusercontent.com/32796589/112737869-c54bbf80-8f55-11eb-9488-4ea29a89c05c.png)
+![image](https://user-images.githubusercontent.com/32796589/112737815-3474e400-8f55-11eb-8c02-6e2f1ebc2108.png)
+16.
