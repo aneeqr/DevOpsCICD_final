@@ -4,8 +4,9 @@
  ## CREATE AZURE RESOURCES
  
  1. Create Azure Resources
- * [Microsoft custom templates](https://docs.microsoft.com/en-us/learn/modules/implement-cicd-iot-edge/4-exercise-create-ci-pipeline-iot-edge)- Create Resource Group, Iot Hub and Container Registry.
- ![image](https://user-images.githubusercontent.com/32796589/112735927-e22cc680-8f46-11eb-80c6-0e8baae199d2.png)
+ * [Microsoft custom templates](https://docs.microsoft.com/en-us/learn/modules/implement-cicd-iot-edge/4-exercise-create-ci-pipeline-iot-edge)- Create Resource Group, Iot Hub and Container Registry and device provisioning service.
+![image](https://user-images.githubusercontent.com/32796589/112736469-dd6a1180-8f4a-11eb-894f-80d804922a69.png)
+
 
  2. Create the Iot Edge device identify after you have created the hub using Azure CLI.
  ```{r}
@@ -32,10 +33,9 @@ az deployment group create \
 --parameters deviceConnectionString=$(az iot hub device-identity connection-string show --device-id sp3 --hub-name IoTEdgeDevOps-iothub-qxw -o tsv) \
 --parameters authenticationType='password' \
 --parameters adminPasswordOrKey="<REPLACE_WITH_PASSWORD>"
-
+ ``` 
 4. Verify that you have the following resources in your resource group.
 ![image](https://user-images.githubusercontent.com/32796589/112736422-5ddc4280-8f4a-11eb-96e8-1d67e97f949b.png)
 ![image](https://user-images.githubusercontent.com/32796589/112736382-2077b500-8f4a-11eb-8a0b-87153ff7dea7.png)
 
- ``` 
  
