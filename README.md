@@ -32,5 +32,10 @@ az deployment group create \
 --parameters deviceConnectionString=$(az iot hub device-identity connection-string show --device-id sp3 --hub-name IoTEdgeDevOps-iothub-qxw -o tsv) \
 --parameters authenticationType='password' \
 --parameters adminPasswordOrKey="<REPLACE_WITH_PASSWORD>"
+
+4. Verify that you have the following resources in your resource group.
+![image](https://user-images.githubusercontent.com/32796589/112736422-5ddc4280-8f4a-11eb-96e8-1d67e97f949b.png)
+![image](https://user-images.githubusercontent.com/32796589/112736382-2077b500-8f4a-11eb-8a0b-87153ff7dea7.png)
+
  ``` 
  
