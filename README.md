@@ -22,3 +22,15 @@ az deployment group create \
 --parameters authenticationType='password' \
 --parameters adminPasswordOrKey="<REPLACE_WITH_PASSWORD>"
  ```
+ Example:
+  ```{r}
+ az deployment group create \
+--resource-group  IoTEdgeResources \
+--template-uri "https://aka.ms/iotedge-vm-deploy" \
+--parameters dnsLabelPrefix='myiot678' \
+--parameters adminUsername='azureuser' \
+--parameters deviceConnectionString=$(az iot hub device-identity connection-string show --device-id sp3 --hub-name IoTEdgeDevOps-iothub-qxw -o tsv) \
+--parameters authenticationType='password' \
+--parameters adminPasswordOrKey="<REPLACE_WITH_PASSWORD>"
+ ``` 
+ 
