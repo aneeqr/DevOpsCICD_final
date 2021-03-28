@@ -164,9 +164,19 @@ This completed the CI pipeline.
 
 1. Navigate to **“Releases”** on left hand side and click **“New release pipeline”.** Similarly, we will start with empty job under template page.
 2. Start with Artifacts. Click **“Add an artifact”**, select the right source, and change **“source alias”** to “drop”. Recalled in previous step, we called our artifacts **“drop”**.
-![image](https://user-images.githubusercontent.com/32796589/112738238-fd083680-8f58-11eb-9e1a-2a3dbc383a9c.png)
-
-4. 
-5. 
+![image](https://user-images.githubusercontent.com/32796589/112738283-7011ad00-8f59-11eb-8e81-5396b8297d07.png)
+3. Enable continous deployment by pressing the trigger button.
+![image](https://user-images.githubusercontent.com/32796589/112738303-90416c00-8f59-11eb-891e-f799ef32080a.png)
+4. Click on “0 task” to add tasks. The steps here is similar to above.
+![image](https://user-images.githubusercontent.com/32796589/112738325-d1d21700-8f59-11eb-8360-978001aa535e.png)
+![image](https://user-images.githubusercontent.com/32796589/112738330-dbf41580-8f59-11eb-8c4a-2e3614a6c88d.png)
+5. Add task to generate deployment manifest for the Iot Edge device.
+Set output path to: “$(System.DefaultWorkingDirectory)/drop/drop/configs/deployment.json”.
+Set .template.json.file to $(System.DefaultWorkingDirectory)/drop/drop/deployment.template.json
+![image](https://user-images.githubusercontent.com/32796589/112738344-047c0f80-8f5a-11eb-8317-99f6eb8e66e2.png)
+6. Add a new task using the **“Azure IoT Edge”** extension. Set Action to deploy to the Iot Edge device. Select your IoT Hub, and device ID that you wish to push modules to.
+![image](https://user-images.githubusercontent.com/32796589/112738384-78b6b300-8f5a-11eb-92c3-60260ae2f58e.png)
+7. 
+8. s
 
 
