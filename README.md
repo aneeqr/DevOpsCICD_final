@@ -249,13 +249,34 @@ This completed the CI pipeline.
  ```
 10. That’s it! Commit the code, you should see the continuous integration and deployment pipeline triggered and run all by itself. 
 
-## RESULTS
+![image](https://user-images.githubusercontent.com/32796589/112738670-f5e32780-8f5c-11eb-977d-208af917da08.png)
 
+11. Go to portal and verify the deployment pushed to the Iot Hub and the Iot device status. 
+
+![image](https://user-images.githubusercontent.com/32796589/112738773-ec0df400-8f5d-11eb-9d9d-7be39c85028b.png)
+![image](https://user-images.githubusercontent.com/32796589/112738833-81a98380-8f5e-11eb-9522-5e7cb21ac7c5.png)
+
+12. Verify the status of the modules running in Azure CLI using the following:
+ 
+ ```{r} 
+sudo iotedge list
+ ```
+![image](https://user-images.githubusercontent.com/32796589/112738848-a3a30600-8f5e-11eb-8387-b5d839e5ddd6.png)
+
+
+## RESULTS
 
 ### TEST IMAGE 
 
 ![Healthy-Child-Eating-Apple-1024x731](https://user-images.githubusercontent.com/32796589/112738636-8705ce80-8f5c-11eb-943a-a3f067921efb.jpg)
 
 ### RESULTS
+Run the logs command to check out what your edge devices “sees”!
 
+ ```{r} 
+iotedge logs medium_camera -f
+ ``` 
+
+
+![image](https://user-images.githubusercontent.com/32796589/112738905-f977ae00-8f5e-11eb-8d23-743fc36a21a0.png)
 
