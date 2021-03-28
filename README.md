@@ -210,6 +210,7 @@ This completed the CI pipeline.
 2. Start with Artifacts. Click **“Add an artifact”**, select the right source, and change **“source alias”** to “drop”. Recalled in previous step, we called our artifacts **“drop”**.
 
 ![image](https://user-images.githubusercontent.com/32796589/112738283-7011ad00-8f59-11eb-8e81-5396b8297d07.png)
+
 3. Enable continous deployment by pressing the trigger button.
 
 ![image](https://user-images.githubusercontent.com/32796589/112738303-90416c00-8f59-11eb-891e-f799ef32080a.png)
@@ -234,5 +235,27 @@ This completed the CI pipeline.
 
 ![image](https://user-images.githubusercontent.com/32796589/112738464-1f9b4f00-8f5b-11eb-94b2-91eb63d01d9f.png)
 
+8. Back to the repo, we need to update the code for “deployment.template.json”. Under registryCredentials, update to the following:
+
+ ```{r} 
+"username": "${CONTAINER_REGISTRY_USERNAME}",
+"password": "${CONTAINER_REGISTRY_PASSWORD}",
+"address": "${CONTAINER_REGISTRY_ADDRESS}"
+ ```
+9.  For environmental variable of camera modules, we can indicate the container create options in this file as well. Navigate to the modules, under the camera modules, replace with the following. Remember to replace <classifier module name> with your module’s name.
+
+ ```{r} 
+"createOptions": "{\"HostConfig\":{\"Privileged\":true},\"Env\":[\"videosource=/dev/video0\",\"classifierapi=http://<classifier module name>:80/image\"]}"
+ ```
+10. That’s it! Commit the code, you should see the continuous integration and deployment pipeline triggered and run all by itself. 
+
+## RESULTS
+
+
+### TEST IMAGE 
+
+![Healthy-Child-Eating-Apple-1024x731](https://user-images.githubusercontent.com/32796589/112738636-8705ce80-8f5c-11eb-943a-a3f067921efb.jpg)
+
+### RESULTS
 
 
