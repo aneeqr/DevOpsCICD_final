@@ -188,9 +188,12 @@ Push your code in your visual studio workspace to Github.
 
 ![image](https://user-images.githubusercontent.com/32796589/112737729-8406e000-8f54-11eb-89c9-611a523c4f59.png)
 
-15. Go to variables and enter your container registery details (CONTAINER_REGISTRY_USERNAME,CONTAINER_REGISTRY_PASSWORD,CONTAINER_REGISTRY_ADDRESS). These can be found on portal
+15. Go to variables and enter your container registery details (CONTAINER_REGISTRY_USERNAME,CONTAINER_REGISTRY_PASSWORD,CONTAINER_REGISTRY_ADDRESS) in devops. 
+
 
 ![image](https://user-images.githubusercontent.com/32796589/112737895-0643d400-8f56-11eb-9cf4-08b03b2e2b3c.png)
+
+These can be found on portal using by pressing access keys in the container registry.
 
 ![image](https://user-images.githubusercontent.com/32796589/112737855-9b929880-8f55-11eb-8993-1bd443d0335c.png)
 
