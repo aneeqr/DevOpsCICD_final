@@ -11,7 +11,7 @@
  ## CREATE AZURE RESOURCES
  
  1. Create Azure Resources
- * [Microsoft custom templates](https://docs.microsoft.com/en-us/learn/modules/implement-cicd-iot-edge/4-exercise-create-ci-pipeline-iot-edge)- Create Resource Group, Iot Hub and Container Registry and device provisioning service.
+ **[Microsoft custom templates](https://docs.microsoft.com/en-us/learn/modules/implement-cicd-iot-edge/4-exercise-create-ci-pipeline-iot-edge)- Create Resource Group, Iot Hub and Container Registry and device provisioning service.
 
 ![image](https://user-images.githubusercontent.com/32796589/112736469-dd6a1180-8f4a-11eb-894f-80d804922a69.png)
 
@@ -225,8 +225,8 @@ This completed the CI pipeline.
 ![image](https://user-images.githubusercontent.com/32796589/112738330-dbf41580-8f59-11eb-8c4a-2e3614a6c88d.png)
 
 5. Add task to generate deployment manifest for the Iot Edge device.
-** Set output path to: “$(System.DefaultWorkingDirectory)/drop/drop/configs/deployment.json”.
-** Set .template.json.file to $(System.DefaultWorkingDirectory)/drop/drop/deployment.template.json
+**Set output path to: “$(System.DefaultWorkingDirectory)/drop/drop/configs/deployment.json”.
+**Set .template.json.file to $(System.DefaultWorkingDirectory)/drop/drop/deployment.template.json
 
 ![image](https://user-images.githubusercontent.com/32796589/112738344-047c0f80-8f5a-11eb-8317-99f6eb8e66e2.png)
 
