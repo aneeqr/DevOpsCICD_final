@@ -161,3 +161,12 @@ This completed the CI pipeline.
 
 
 ### CD Pipeline
+
+1. Navigate to **“Releases”** on left hand side and click **“New release pipeline”.** Similarly, we will start with empty job under template page.
+2. Start with Artifacts. Click **“Add an artifact”**, select the right source, and change **“source alias”** to “drop”. Recalled in previous step, we called our artifacts **“drop”**.
+![image](https://user-images.githubusercontent.com/32796589/112738238-fd083680-8f58-11eb-9e1a-2a3dbc383a9c.png)
+
+4. 
+5. 
+
+
